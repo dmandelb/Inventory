@@ -1,5 +1,7 @@
 <% if logged_in? %>
-  Your face is nice.
+  <% @lists.each do |list| %>
+    <%= link_to list.name, list %>
+  <% end %>
 <% else %>
   Your face is stupid.
 <%end %>
